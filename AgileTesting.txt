@@ -1,0 +1,207 @@
+Agile Process:-->
+
+	=> Agile is a iterative developement model.
+	=> In agile total software divided into smaller stories.
+	=> A set of stories organization develop and release 
+		iteration wise.
+	=> An iteration is a small period of time where 
+	   fully functional software developed and release 
+	   to client with in 1 to 2weeks of time.
+
+	What is advantage to client?.
+
+		=> Welcome chanage requriments even at developement.
+
+	sprint:-->
+		Sprint is a duration of time where a few userstories 
+		developed end to end.
+
+
+	What is the difference between iteration and sprint:-->
+		
+		=> When software successfully release to the
+			client is called iteration
+
+		=> Sprint can stop any time and plan for 
+			new sprints incase information is
+			lacking from client
+
+
+Scrum:-->
+	=> Popular developement framework in agile..
+
+	Scrum Users:-->
+		1. Product Owner    [Business Analyst]
+		2. Scrum Master     
+		3. Developement Team  and  QA Team
+
+	Step1:-->
+		product owner collect initial requirements and 
+		Prepare usecases
+
+	What is UseCase?.
+		A Specific Requirement Based on StakeHolder View.
+		=> It is a documented description it contains 
+			everything to develop and test software.
+
+			=> PreCondition to Follow
+			=> Post Condition to Follow
+			=> Actors [Persons involve in software usage]
+			=> Business Conditions and Special Requirements
+
+
+		To Understand Usercase to Every Team member Product
+		owner convert into UserStories.
+
+		[User stories are usefull to improve communication
+			between business team and technical team]
+
+		UserStory:-->
+		A small narration of  requirement what client is
+		expecting..
+
+		As a ------I want ------So That
+
+		=> As a customer i want to add products to cart
+		=> As a Merchant i want to add new product So that 
+				user can purchase
+							
+	    Note:--> All user stories will be added to backup folder..
+
+
+		What is scenarios in Agile?
+
+		=>Scenarios are designed in gherkin language
+		=>It is a plain language which can convert
+			plain text into automation code.
+		=> Each user story may contain set of scenarios
+
+		
+		Scenario:  Given Site  url
+			   When user Search for Product
+			   Then prodcut should be display in Page
+		
+		Scenario:   Given Site url
+			    And user search for product
+			    When User click on add to product
+			    Then product should add to cart
+
+		
+
+	What is Epic:-->
+		=> Epic is a large reqruiement and 
+			epic contains set of scenarios.
+			 
+
+
+	Step2:-->	[Dynamic planning/ High Level Planning]
+
+		=> product owner select few user stories from
+			back up folder 
+		=> Scrum master create sprint and assign user stories to sprint
+
+		=> Sprint is a duration of small period of time where
+			all user stories to develop and test.
+		=> All Development and testing process monitor
+			by [Scrum master].
+		=> If any user story is incomplete Send user story
+			back to backup folder and then user story
+			will be reassingned in another sprint.
+
+	Step3:-->
+		=> Scrum Master assign userstories to 
+		   Correspondent team members.
+		=> After userstories assignment develpemenet team 
+		   and testing team create sub tasks.
+
+
+		Develpoer task1:--> Write a program for user story
+		Developer task2:--> Draw a flowgraphs to programs
+		Develoepr task3:--> Complete unit Testing
+
+		Tester task4:-->  Conduct manual test
+		Tester taks5:-->  prepare automation code
+		Tester task6:-->  Debug program before execution
+		Tester task7:-->  Reporting failure defects
+		Scrum Master:-->  prepare metrics for sprint..  
+
+
+		Note:--> After completing each task developer,
+			testengineer and other team memebers move 
+			all taks from Inprogress state to done state.
+
+
+	Story points:-->
+		Because story points represent the effort 
+		to develop a story
+					
+	Who provide this story point:-->
+
+		Everyone who involve int0 userstory developement 
+		[Developer, Tester, Operational Team, Metric ---etc]
+
+	What Goes Into a Story Point?
+
+	The amount of work to do
+	The complexity of the work
+	Any risk or uncertainty while doing the work
+
+
+				Developement :-->  5   
+				Tester	     :-->  3
+				Operationals :-->  2
+
+			
+
+	What is Burndown chart:-->
+	    => Burndown chart prepare by scrum master,
+	       it is usefull to track developer and Tester
+		progress of work
+
+	    => Use the Burndown Chart to track the 
+		total work remaining for a sprint, 
+		and to project the likelihood of achieving 
+		the sprint goal.
+ 
+		=> By tracking the remaining work throughout 
+	  	 the iteration, a team can manage its progress 
+	  	 and respond accordingly.
+
+====================================================================================================================>>
+Meeting:-->
+
+		=> Sprint Planning
+		=> StandUp meeting
+		=> Iteration meeting
+		=> Retrospective meeting
+
+=====================================================================================================================>>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
