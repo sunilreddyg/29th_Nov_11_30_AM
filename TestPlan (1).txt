@@ -1,0 +1,121 @@
+﻿TestPlan:-->
+	After Completed reviews on test initiation document, 
+	Test lead design test plan.
+	
+	It is a guideline document to testing team..
+
+
+	What you find in test plan?
+		What to Test?
+		Where to Test?
+		How to Test?
+		when to Test?
+	
+	It is not a one time document. Testplan receive differnt
+	version accoring to dynamic planning.
+
+	
+
+
+
+ Test plan ID: 
+	The name of test plan document for future reference.
+		TP_v1.0
+
+ Introduction: 
+	About corresponding project requirements or functionality
+
+ Test items: 
+	The names of all Testings need to perform on current build
+		=> [System Testing, API testing, DB-Testing ---etc]
+	
+
+ Feature to be tested: 
+	The names of requirements or functionality to be test.
+	=> Admin Module [Creation, Updation, Delection]
+
+ Feature not to be tested: 
+	=> The names of tested requirements
+	=> The names of requirements part of other team members
+	=> The names of testings optional under current release
+	[Performance Testing, UnitTesting, Integation Testing  --etc]
+
+  Candidates list:-->
+	The names of the user who is responsible to perform testing
+
+
+ Test environment: 
+	Required H/w and S/w to use in testing.  
+	[Browser Name &  Browser version  &  Operating system]
+	[Testenvironment will be setup before start system testing]
+
+ Entry criteria: 
+	[To start test execution]
+ 	Test cases prepared and reviewed after training sessions.
+	Real test data received from client
+	Test environment established by H/w team (computers S/w & H/w).
+ 	Received s/w build from developers.
+
+Suspension criteria: 
+	[To interrupt test execution]
+	Test environment Problems (H/w problem)
+	Software is not working.
+	More defects are in pending by developers.
+
+Resumption criteria:-->
+	[When to resume suspended execution]
+	After Environment Problemes fixed
+	Previously reported defects has been fixed
+	
+Exit criteria: 
+	(To stop test execution)
+	All requirement in s/w are tested
+	Test duration exceeded
+	95% testcase passed
+ 	All major defects should be re-solved
+	[Take screenshot of each test pass/fail]
+
+ Test deliverables: 
+	The list of testing documents to be prepared by 
+	test engineer for future reference 
+	[Test scenarios, test cases, test logs, defect reports....]
+	[Daily Status Reports, Weekly Status Reports, MOM reports]
+
+ Resource Training: 
+	The names of selected test engineers for the 
+	corresponding project testing and required no. 
+	Of training sessions for them to understand 
+	customers requirements.
+
+Roles and Responsibilities: 
+	Names of jobs and their responsibilites under project
+	The work allocation to testing team
+	[According to their technical skill] 
+
+ Schedules: 
+	The dates and time to be followed by test engineers.
+	Future build release dates and schedules.
+
+ Risks & Assumptions:
+	assumptions: The previously analyzed list of risks 
+	and solutions to overcome.
+	
+	What if time is exceeded?
+	Perform Informal testings [Adhoc Testing]
+
+	What if client not specified requirement?
+	Perform exploraroty testing 
+
+ Approvals: 
+	Approvals from PM.
+
+Ques:--> Do you have experience into test plan developement
+	 No, [It is a test lead job]
+	 But i know what testplan contains..
+
+
+Que:--> Do you involve in test plan?
+	Yes, I followed Testplan to Condcut Software Testing
+
+
+
