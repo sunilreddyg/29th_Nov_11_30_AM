@@ -1,0 +1,128 @@
+Defect Submit:-->
+
+	While submitting defect test engineer to fill more details to understand
+	defect stage..
+
+	Items to submit:-->
+	
+		1. DefectID
+		2. Subject
+		3. TestcaseName/ID
+		4. Steps to produce
+		5. Status
+		6. Seviority
+		7. Priority
+		8. Reproducable
+		9. Type of defect
+		10. Release version
+		11. Sprint version
+		12. AssignTo
+		13. Comments
+		14. Screenshot
+
+DefectID:-->
+	=> Defect Management tool genarate unique ID for each defects
+		which helps for future reference.
+
+Subject:-->
+	=> Here tester need to specify what is the actual mismatch found at software.
+	=> Here Tester should describe defect shot and understandable way.
+
+TestcaseName/ID:-->
+	
+	=> birth place of defect, Here test enginerr provide Testcase name/ID
+		which helps developer to under stand origin of defect.
+
+Steps to Produce:-->
+	=>  Here tester need to fill detail navigations to reach defect..
+	1. How i tested
+	2. What i expected
+	3. What i found
+		
+Status:-->
+	To track defect tester and developement provide different status like
+		New
+		Open
+		Rejected
+		Differed
+		Reopen
+		Closed
+		Evaluation     [Not Confirmed]
+		
+		* Testing Team only resposible to provide status as
+				New, ReOpen,Closed.
+
+Seviority:-->
+
+	Here test engineer is responsibile to provide seviority of defect.
+	TestEngineer provide different Seviority status  
+		[It is subject to Project/Organization]
+
+		Fatal       
+		Critical
+		urgent
+		High
+		Medium
+		Low
+		
+	Fatal:-->       Tester Provide fatal when he found show stopper defect.
+	Critical:-->   Tester provide critical when he found any key requirement
+				not working [ If ther is no work arround]
+	urgent:-->
+		        Tester provide urgent when any environmental/ Technical 
+			issues found.
+	High:-->
+			Tester provide high when important feature is missing 
+			and any data loss or data corruption releated defects.
+
+	Medium:-->
+		       Tester provide when any functionality hava incorrect 
+		 	operation but their is work arround available.
+
+	Low:-->
+			Tester  provide Low when he found cosomitic defects.
+			[No Risk]
+
+Priority:-->
+	     Tester define priority while submit defect but it won't take as final. Priorty
+	     will be decided after defect review.
+
+		[Defect review is a meeting conduct by developemenet  and testing team]
+	Priority Items:-->    
+		p1  --> where defects need to fix immediatly [WIth in four hours]
+		p2  --> where defects  need to fix with in business day
+		p3  --> where defects need to fix before sprint release
+		p4  --> where defects need to fix before shipment of product to 
+				stake holder..
+
+		
+Reproducable:-->
+		Here tester need to analyse this defect may occur in future release.
+		tester ony provide yes/No status.
+
+
+Type of defect:-->
+		Tester submit defect type like
+		Functinal, Technical, Validation, Gui, Performance, Security 
+		Defect, Data Loss,Data corruption, System Crash, Database  ----etc
+
+
+Release version:-->
+		Tester should choose version number/Name  of the release
+		[Tester can choose from listBox according to testplan/Release note]
+
+Sprint version:-->
+		Test should choose version number/Name of sprint
+		[Tester can choose from listBox  according to testplan/Release note]
+
+screenshot:-->
+		Tester should take screen shot of every defect and attach to defect.
+		[In Manual We have to Store in word document]
+======================================================================
+
+
+
+
+
+
+	
