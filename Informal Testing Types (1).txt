@@ -1,0 +1,155 @@
+Informal Testing types:-->
+
+
+Exploratory Testing?
+	Usually, this process will be carried out by domain experts. 
+	They perform testing just by exploring the functionalities of the 
+	application without having the knowledge of the requirements.
+
+
+Adhoc testing:-->
+
+	Ad-hoc testing is quite opposite to the formal testing.
+	It is an informal testing type.In Adhoc testing, 
+	testers randomly test the application without following any
+	documents and test design techniques.
+
+	When Adhoc testing should follow?
+		When time is exceeded 
+		When client is expected quick release
+		When test team have incomplete documentation 
+
+Monkey Testing?
+	Perform abnormal action on the application deliberately in order 
+	to verify the stability of the application.
+
+Gorilla Testing:-->
+	
+	perform repeated testing on perticular module/function in order to check
+	stability of application
+
+
+==================================================================
+What are the principles of Software Testing?
+	1. Testing shows presence of defects
+	2. Exhaustive testing is impossible
+	3. Early testing
+	4. Defect clustering
+	5. Pesticide Paradox
+	6. Testing is context depending
+	7. Absence of error fallacy
+
+
+1. What is Exhaustive Testing?
+	Testing all the functionalities using all valid and invalid inputs 
+	and preconditions is known as Exhaustive testing.
+
+2. What is Early Testing?
+	Defects detected in early phases of SDLC are less expensive to fix. 
+	So conducting early testing reduces the cost of fixing defects.
+
+3. What is Defect clustering?
+	Defect clustering in software testing means that a small module or 
+	functionality contains most of the bugs or it has the most operational 
+	failures.
+
+4. What is Pesticide Paradox?
+	Pesticide Paradox in software testing is the process of repeating the same test
+	again and again, eventually, the same test cases will no longer find new defects.
+	So to overcome this Pesticide Paradox, it is necessary to review the test
+	cases regularly and add or update them to find more defects.
+
+5. What is Defect Cascading in Software Testing?
+
+	Defect cascading in Software testing it means triggering of other defects in an
+	application. When a defect is not identified or goes unnoticed while testing, it
+	invokes other defects.
+
+6. Absence of error fallacy:-->
+
+	If software is unstable it is no matter how many defects find by the testing 
+	team when software is not meeting client wishes.
+
+==========================================================================================================>>
+Test metrics:-->
+
+	Test execution and execution results play vital role in testing. So that
+	testing team regularly report execution result to test lead.
+
+		1. Base metric
+		2. Calcualated metric
+
+	
+	Base metric:-->
+
+		Testlead collect information from every test engineer
+				
+		1. Number of testcase executed per day
+		2. Number of defects identified
+		3. Number of passed testcases
+		4. Number of failed testcase
+		5. Number of testcase uncovered
+		6. Number of high seviority defects found
+		7. How many testccase have been designed today per requirement
+		8. How many testcase are pending
+				
+				
+	Calculated metrics:-->
+	        By collection all base metrics test lead prepare calculated metrics
+		and forward to project manager and client.
+	
+		Mostly calculated metrics designed in Graphs and Pie Charts
+
+
+
+	Advantages of metrics:-->
+		Every day monitoring tester work it will helps to findout what was the 
+		pending work with in project.
+
+		If there is a delay in testing at least we can request a client some more
+		day for release.
+===================================================================================
+
+RTM:-->[Requirement tracability metrics]
+
+	 Mapping Related testcase to Requirements
+			1. Forward tracability
+			2. Backward tracability
+
+		
+		1. Forward Tracability
+
+				Login      [Tc001,Tc002,Tc003,T004,Tc005]
+				Logout	   [Tc021,Tc022,Tc023]
+
+		2. backward tracability
+
+				[Tc031,Tc0032---Tc050]  ------> registration
+
+
+		Advantages of RTM:-->
+			
+				1. Easy to find regression testcase
+
+Linked Defects:-->
+
+		Mapping failed Testcase to Defects
+
+
+=====================================================================================
+QA-Signoff:->
+	After completed testexecution test lead prepare QA signoff Report.
+	
+	What Signoff document contains:-->
+
+		=> What are the tasks assigned to qa team and
+			how many are finished
+		=> How Many new testcases are desinged
+		=> How many total testcase executed
+		=> How many defects are reported
+		=> How many defects are differed
+		=> Final Closure report
+		
+
+
+
