@@ -1,0 +1,151 @@
+Selenium IDE:-->
+	=> Selenium IDE a extension for firefox,chrome,edge browser
+	=> It is a record and playback tool it automate browser
+			interfaces
+	
+	Advantages:-->
+	=> Any non technical user can record user actions at webpage
+		and playback when it is required
+	=> Recorded script can be converted into differnet languages
+	=> IDE has inbuilt identification mechanism
+	=> It is designed to run adhoc testcases
+
+
+Steps to Install Selenium IDE:->
+
+	=> Open Chrome browser
+	=> Open Selenium offical website  https://www.selenium.dev/downloads/
+	=> Under Selenium IDE click on "Chrome" link
+	=> At Chrome Extension page click on "AddtoChrome" button
+	=> At dialog box click on AddExtension Button 
+		[This action complete installation]
+	=> Open Browser extensions and pin the plugin to see 
+		at browser tool bar
+	=> click on Selenium IDE icon inorder to open selenium IDE
+
+
+How to open selenium IDE:-->
+	=> At browser tool bar click on  SE Icon
+	=> IDE open with basic 4 options
+
+		=> Record a new test in project
+		=> Create  a new Project
+		=> Open existing Project
+		=> close Selenium IDE
+
+Create Project in IDE:-->
+		
+	=> Open Selenium IDE from Tool Bar
+	=> At IDE Window Click on Create New project Link
+	=> Enter project Name and click on Finish
+
+
+IDE Interface options:-->
+		1. Testcase Pane
+		2. ToolBar
+		3. Recording and Design view
+		4. Log and Reference
+
+	TestcasePane:-->
+		=> Create New Tests and New Suite Files
+
+	ToolBar:-->
+		=> Allow Run single and Group Tests
+		=> Can pause and debug run
+		=> Start recording and stop recording
+		
+	Recording and Design view:-->
+		=> Can see recorded scripts
+		=> Allow to edit or create own scripts
+
+	Log and Reference:-->
+		=> can see result for every test
+		=> Any command references
+=================================================================>
+Record A New Test:-->
+		
+	PreCondition:-->  Analyse the steps to record it 
+
+		=> Click On Record Button [By Default it is turned off /Press
+				button to turn it on]
+		=> Enter Site url and click on start recording
+		=> IDE it self open recorded window
+		=> Perform mouse and keyboard interaction at webpage
+			according to your testcase
+		=> After Completed Recording steps press Stop Recording Button
+		=> It Ask to enter Testcasename
+		=> Click on Save Project button
+		=> Enter Project extension as .side 
+============================================================
+Assertions:-->
+	=> Assertions are usefull to verify acutal behaviour at
+		web browser window.
+	=> Assertions are work like a checkpoints at webpage
+		
+
+	
+	How to apply assertions in Selenium IDE:-->
+
+		=> Open Selenium IDE
+		=> Turn Recording Mode on
+		=> Right click on page or object 
+		=> Select Assert option at context menu
+		=> Select Assertion type [Assert/Verify --etc]
+		=> Then Select a Assertion command [text/title]
+		=> With this action assertion command successfully
+			update to IDE Recording window..
+
+	
+	Assertion Types:-->
+
+			Assert
+			Verify
+
+Assert and verify commands:-->
+
+	title:-->  Confirm the title of the current 
+		page contains the provided text
+
+
+	text:-->> Confirm that the text of an element contains 
+		 the provided value
+
+	value:--> Confirm the (whitespace-trimmed) value of an input 
+		  field (or anything else with a value parameter). 
+		  For checkbox/radio elements, the value will be "on" 
+		  or "off" depending on whether the element is checked 
+		  or not.
+
+	 Presented :-->
+		Confirm that the target element is present 
+		somewhere on the page
+
+
+	Not presented:-->
+		Confirm that the target element is not present 
+		anywhere on the page
+			
+
+	Checked:-->
+		Confirm that the target element has been checked.
+
+	Not Checked:-->
+		Confim that the target elements has not been checked
+
+
+	Editable:-->
+		Confirm that the target element is in editable mode
+		
+
+	Not Editable:-->	
+		Confirm that the target element is in readonly mode
+
+
+
+
+
+
+
+
+
+	
