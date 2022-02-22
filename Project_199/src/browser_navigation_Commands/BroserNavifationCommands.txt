@@ -1,0 +1,53 @@
+
+Note:--->
+	Selenium doesn't automate browser options,
+	only automate page interfaces with in browser.
+
+	To manage basic browser option we have few navigation commands available
+	
+back():------->
+Move back to previous page from current window
+
+Syntax:--->
+	driver.navigate().back();
+-------------------------------------------------------------------------------------------
+
+forward():------>
+Move a single page forward in the browser's window.
+
+Syntax:--->
+	driver.navigate().forward();
+	
+---------------------------------------------------------------------------------------------	
+refresh():---->
+Refresh the current page
+Syntax:--->
+	driver.navigate().refresh();
+--------------------------------------------------------------------------------------------------
+to(URL):---------------->
+load url to browser window using navigate command
+
+syntax;-->
+	driver.navigate().to("http://domainname.com");
+
+-----------------------------------------------------------------------------------------------------
+Close():---->
+	method close single browser window opened by webdriver
+syntax:--->
+	driver.close();
+---------------------------------------------------------------------------------------------------------
+quit():--->
+
+	method close all browser windows opened throw webdriver
+Syntax:--->
+	driver.quit();
+------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
