@@ -1,15 +1,14 @@
 package robot_window_interface;
 
-import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.InputEvent;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class Mouse_Actions {
+public class Mouse_Actions 
+{
 
 	public static void main(String[] args) throws Exception {
 		
@@ -32,7 +31,6 @@ public class Mouse_Actions {
 		//To Perform click action using mouse we shoud use Press and Release Options
 		robot.mousePress(InputEvent.BUTTON1_MASK);
 		robot.mouseRelease(InputEvent.BUTTON1_MASK);
-		
 		
 
 	}
