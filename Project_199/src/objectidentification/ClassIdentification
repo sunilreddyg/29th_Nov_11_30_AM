@@ -1,0 +1,33 @@
+/*
+		Working with Class Identifier:-->
+		 
+		 	Note:--> In general class identify group of objects.
+		 			But Some times developer use class as unique property. So
+		 			in that case we can use class property to identify
+		 			single object..
+		 			
+		 Rules to Follow while using class property:-->
+		 
+		  		=> Check duplication of class before use
+		 		=> Don't use class property value along with spaces
+		 		=> because developer use spaces with in class to define
+		 			multiple class properties..
+		  
+		  for Example:-->
+		  		<div  class="navigation  Signin_link">
+		   
+		 			By.className("navigation Signin_link")   ----> Wrong
+		 			[Dont' use classname with spaces perticularly when using classname as property]
+		   			
+		  			By.className("navigation")
+		   					[OR]
+		  			By.className("Signin_links")      
+		  			=> Make sure duplication of class individually before use it..
+		 		
+		 	Note:--> While defining class property along with Xpath
+		 			and cssSelector locators we can include spaces...
+		 
+		 				By.xpath("//div[@class='navigation  Signin_link']")
+		 				By.cssSelector("div[class='navigation Signin_link']")
+		 
+		

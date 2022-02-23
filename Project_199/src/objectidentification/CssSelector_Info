@@ -1,0 +1,260 @@
+CssSelector:-->
+	CssSelector is a global locator it recognize objects at UserInterface.
+	using backend html source.
+	
+	Advantages of cssSelector:-->
+		=> WebDriver have inbuild identifiers [ID,Name,ClassName,Tagname], With these
+			identifiers we can't identify all objects at webpage. In this case CssSelector
+			Helps to identifies object at webpage using Other Locators as well 
+			[href,title,aria-label,type --etc]
+		=> CssSelector identify locations using relative path
+		=> CssSelector effectively identify objects at IE browser.
+		
+
+	1. Default css
+	2. Css_Attribute
+	3. Relative css[Axis Specifier]
+	4. Parital css
+	5. Css-position
+
+
+Default_css:-->
+	Default css target object with only   
+	ID and Class property [optionally tagname]
+
+
+	htmlsource:-->
+		<input  id="email"  class="login"  type="text"> </input>
+
+	Using Default ID and class:-->
+
+		driver.findElement(By.id("email"));
+		driver.findElement(By.classname("login"));
+
+	Using CssSelector:-->
+		
+		driver.findElement(By.cssSelector("#email"));
+		driver.findElement(By.cssSelector(".login"));
+
+		Note:--> During Default cssSelector   
+				# refer IDproperty
+			    . refer Class Property
+
+	 Identyfy location with ID and class Property combination.
+			Syntax:===> tagname#ID.Classname
+
+		driver.findElement(By.cssSelector("input#email.login"));
+===============================================================>>
+page htmlsource:--->
+
+1. <div class="C"></div>
+2. <div id="x" class="B"</div>
+3. <div id="x" class="C"></div>         -------> Target Location
+
+Identify 3rd element:--->
+
+		By.id("x")  ------> 2 nd
+		By.class("C")  ----> 1st 
+		By.cssSelector("div#x.C")  ------>3rd
+		
+=============================================================
+CssSelector =>  Default cssselector --->Combinations
+
+	#id
+	.classname
+	#id.classname
+	tagname#id.classname
+	tagname.classname
+	tagname#id
+==============================================================
+Default CssSelector when Class property having space:-->
+
+HtmlSource:-->
+		<button  class="user reg account"></button>
+		
+		=> Identifying with class property
+		By.className("user")
+		By.className("reg")
+		By.className("account")
+		
+		=> CssSeelctor can use multiple classes to identify object..
+		By.cssSelector(".user.reg.account")
+		By.cssSelector(".user")
+		By.cssSelector(".reg.account")
+		By.cssSelector(".user.account")
+		By.cssSelector(".account")
+==============================================================
+Css_Attribute:-->
+		Instead of target elements with id and name property. We can
+	target location with other attributes using Attribute syntax.
+
+	Note:--> Make sure duplication fo other properties before using it.
+
+	Htmlsource:-->
+	<div  id="Sbtn"   aria-lable="Login"  type="submit"></div>
+
+CssAttribute syntax:-->
+	
+		By.cssSelector("tagname[Attributename='Attributevalue']")
+		By.cssSelector("*[Attributename='AttributeValue']")
+		
+		
+		=> while using different locators otherthan id & name property
+			make sure those properties available unqiue.
+
+
+		By.cssSelector("div[id='Sbtn']")
+		By.cssSelector("div[aria-label='Login']")
+		By.cssSelector("div[type='submit']")
+		
+		=> We can also use * instead of tagname
+		By.cssSelector("*[id='Sbtn']")
+
+Other than id unique attributes followed by developers.:-->
+		Name
+		aria-label
+		placeholder
+		dataid
+		data-cy
+		datatrackingid
+		datareactid
+		href
+		title
+		aria-describedby
+===================================================
+Css_Multiple Attributes:--> Identify element with multiple attibutes using css selector.
+
+	Syntax:==> 	tagname[prop='pvalue'][prop='pvalue']
+
+page htmlsource:--->
+
+1. <div type="C"></div>
+2. <div id="x" class="B"</div>
+3. <div id="x" type="C"></div>         -------> Target Location
+
+Identify 3rd element:--->
+		
+			By.id("x")  ---> 2nd object
+			By.cssSelector("div[id='x'][type='C']")  --> 3rd object
+			
+=========================================================================
+Css_Attribute with class property:-->
+		
+		<input class="user login account">
+		
+		By.classname("user")             
+		By.cssSelector(".user.login.account")
+		By.cssSelector("input[class='user login account']")
+			
+		Note:--> During css attribute syntax we can define
+					class property along with spaces.	
+=============================================================================
+Dynamic Css:--> [CssSelector identify location with partial attributes]
+
+	To target Web element location with partial attributes, CssSelector follow
+	below regular expressions...
+	
+		=>    *   [Any matching characters]
+		=>    $   [End characters]
+		=>    ^   [Start characters]
+Example:--> target element with matching characters
+
+	Manual Browser         :-->   <input  id="687dg_email_987jjhf"></input>
+	Automation Browser     :-->   <input  id="54fsdf_email_34534"></input>
+
+		by.cssSelector("input[id*='email']")
+===========================================================================
+Example:--> target element with start characters
+
+	Manual Browser         :-->   <input  id="email_987jjhf"></input>
+	Automation Browser 	   :-->   <input  id="email_34534"></input>
+
+
+		by.cssSelector("input[id^='email']")
+============================================================================
+Example:--> target element with end characters
+
+	Manual Browser         :-->   <input  id="987jjhf_email"></input>
+	Automation Browser     :-->   <input  id="34534_email"></input>
+
+		by.cssSelector("input[id$='email']")
+============================================================================
+Example:-->  Target child node with parent Node.
+
+HtmlSource:-->
+
+	<div id="login_conainer"  class="demo">
+		<input id="9ju7yg876"  type="text">  ---->Target Element
+	</div>	
+
+
+	Syntax:-->
+		parentnode  > childnode...
+
+		By.cssSelector("div[id='login_conainer'] >  input")
+		
+		Note:--> greaterthan symbol [>] identify child elements under
+				 parent node...
+
+=============================================================================
+
+HtmlSource:--> parent and child identification using  <<SPACE>>
+			   It identify matching descendent under parent..
+	
+	<div id="login_conainer"  class="demo">
+		<div class="demo">
+			<input id="9ju7yg876"  type="text">  ---->Target Element
+		</div>
+	</div>	
+
+Syntax:-->
+		parentnode  <space> childnode...
+
+		By.cssSelector("div[id='login_conainer']  input")
+		By.cssSelector("div[id='login_container'] > div[class='demo'] > input")
+		
+===============================================================================
+HtmlSource:--> Identify Required node with help of sibling node..
+
+	<div class="demo">
+		<label id="email-login"> <label>
+		<input id="9ju7yg876"  type="text">  ---->Target Element
+	</div>	
+
+
+		By.cssSelector("label[id='email-login'] + input")
+		By.cssSelector("label[id='email-login'] ~ input")
+		
+		+ and ~  operator identify next siblign objects
+=================================================================================
+Htmsource:--> Identify Required object using Position
+
+		<div id="demo">
+			<div class="logo"></div>
+			<selector class="logo"></selector>
+			<div class="logo"></div>
+			<selector class="logo"></selector>
+			<div class="logo"></div>
+		<div>
+		
+		
+		div[id='demo'] > seletor:nth-child(4)
+		div[id='demo'] > selector:nth-of-type(2)
+		div[id='demo'] > selector:nth-last-child(2);
+		 
+		
+		tagname:nth-child(int pos)     
+				--> Identify child object position under parent object
+				
+		tagname:nth-of-type(int pos)
+				--> Identify only selected child tag object position under
+					parent object
+					
+		tagname:nth-last-child(int pos)
+				--> identify child position from last object to first object
+				
+		
+		
+		
+		
+================================================================================
