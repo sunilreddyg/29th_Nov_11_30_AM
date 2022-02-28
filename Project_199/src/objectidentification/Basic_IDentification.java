@@ -16,8 +16,12 @@ public class Basic_IDentification
 		//Load Webpage to automation browser
 		driver.get("http://facebook.com");
 		
+		//identifying object at webpage and typing text init
 		driver.findElement(By.id("email")).sendKeys("qadarshan@gmail.com");
+		driver.findElement(By.id("pass")).sendKeys("9030248855");
 		
+		//Identifying object at webpage and perform click actions
+		driver.findElement(By.name("login")).click();
 		
 	}
 

@@ -83,6 +83,7 @@ HtmlSource:-->
 		By.cssSelector(".reg.account")
 		By.cssSelector(".user.account")
 		By.cssSelector(".account")
+		By.cssSelector(".reg")
 ==============================================================
 Css_Attribute:-->
 		Instead of target elements with id and name property. We can

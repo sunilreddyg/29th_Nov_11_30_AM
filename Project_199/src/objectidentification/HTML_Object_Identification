@@ -25,7 +25,7 @@ Default inspect option at browser window:---->
 
 Locators in Webdriver:--->
 		By is a locator class at Webdriver,We have
-		list of indentification methods under By Class.
+		list of identification methods under By Class.
 	
 	id
 	name

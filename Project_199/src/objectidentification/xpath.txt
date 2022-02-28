@@ -1,0 +1,155 @@
+Xpath:-->
+
+	Xpath is a native location identification at webpages. Xpath
+	Identify locations at webpage using backend html source.
+
+
+	1. Absolute xpath
+	2. Relative Xpath
+
+
+Xpath Attribute :-->
+	Below syntax identify location at webpage using unique attributes..
+
+	//tagname[@Attributename =  'Attribute value']
+	//*[@Attributename =  'Attribute value']
+
+
+
+	// => Current Node     [To start Relative xpath]
+	/   => RootNode        [To start absolue xpath]
+	tagname=>  only selected tag element
+	*   => All elements under current node.
+	[]  => Allow multiple attributes to define
+	@  => Only Attributes ---> Refer attribute at html node
+	
+Html Source:-->
+
+	<input  id="email"  class="user_email_login"  placeholder="Enter name"></input>
+
+
+	//input[@id='email']
+	//input[@class='user_email_login']
+	//input[@placeholder='Enter name']
+============================================================
+
+Xpath text:-->
+	Below syntax identify location using element text.
+
+	//tagname[.='Element Text']
+	//tagname[text()='Element partial Text']
+	
+	text() -->  Refer partial text
+	.        --> Refer element text.
+
+Html Source:-->
+
+	<span class="header" > Create Account </span>
+
+
+	//span[text()='Create Account']
+	//span[.='Create Account']
+
+=================================================================
+Dynamic Xpath:-->
+	identify location using partial attributes or text.
+
+Syntax:-->
+		Recognize object using matching characters
+			//tagname[contains(@prop , 'match characters')]
+			//tagname[contains(. , 'partial visibletext')]
+			
+		Recognize object using parital attribute or text using start characters
+		
+			//tagname[starts-with(@prop , 'pvalue')]
+			//tagname[starts-with(. , 'text start chars')]
+			
+		Recognize object using parital attribute or text using end characters
+		
+			//tagname[ends-with(@prop , 'pvalue')]
+			//tagname[ends-with(. , 'text end chars')]	
+
+=================================================================..
+Example:--> Target Element with partial attribute properites
+
+Manual Browser session:-->
+			id="email_987fsdlsjlksdjflsdjf"
+Automation browser session:-->
+			id="email_jflsdsdoijflksdjlsd"
+
+
+	       		//*[contains(@id,'email')]
+===================================================================
+Xpath:---> Multiple properties
+
+			//tagname[@Propname='Propvalue'][@Propname='Propvalue']
+			//tagname[@Propname='Propvalue'][.='innertext']
+			//tagname[contains(.,'Partial text')][@propname='propvalue']
+
+To identify Xpath using  AND function.
+
+		//tagname[@prop='pvalue' and  @prop='pvalue']
+		//tagname[@prop='pvalue' and  .='innertext']	   
+		
+		
+To identify xpath using OR function.		
+		
+		//tagname[@prop='pvalue' or  @prop='pvalue']
+		//tagname[@prop='pvalue' or  .='innertext']	   
+			
+To Recognize object with multiple attributes
+					[using <OR> <And> comparision]		
+			 
+		//*[@prop='pvalue' and (@prop='pvalue' or  @prop='pvalue')]
+		//*[@prop='pvalue' or (@prop='pvalue' and  @prop='pvalue')]
+	       		
+===================================================================..
+Example:-->  Target Element with parent Node.
+
+HtmlSource:-->
+
+	<div id="login_conainer"  class="demo">
+		<input id="9ju7yg876"  type="text">  ---->Target Element
+	</div>	
+
+	Syntax:-->
+		parentnode  / childnode...
+
+		By.xpath("//div[@id='login_conainer']/input")
+		
+		Note:-->  Single forward slash identify child element
+				 under parent
+
+=====================================================================
+Example:-->  Target Element with Index Number
+
+HtmlSource:-->
+
+	<div id="login_conainer"  class="demo">
+		<input  type="text"> 
+		<div class="abc"></div>
+		<input  type="text">  ---->Target Element
+	</div>	
+		
+		Syntax:-->
+		
+		By.cssSelector("div[id='login_container'] > input:nth-of-type(2)");
+		By.xpath("//div[@id='login_container']/input[2]")
+		
+		Note:--> Index number helps to findout any child object
+				under parent using type of object.
+=============================================================================
+Example:--> Target Element with Sibling Object
+
+	<div class="demo">
+		<input  id="email" type="text"> ---> Source
+		<div class="abc"></div>
+		<input  type="text">  ---->Target Element
+	</div>	
+	
+	Sytnax:-->
+				
+		By.xpath("//input[@id='email']/following-sibling::input[1]")
+		
+		
+

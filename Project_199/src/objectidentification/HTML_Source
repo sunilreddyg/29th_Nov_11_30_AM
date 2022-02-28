@@ -1,0 +1,98 @@
+Editbox:-->
+
+	HtmlNode:-->
+		
+		<input  type="text"  id="email">      --> For Textboxes
+		<input  type="email"  id="email">   --> For email textboxes
+		<input  type="pass"  id="email">     --> For password textboxes
+
+==============================================================
+
+Dropdown:-->
+		
+	HtmlSource:-->
+
+		<select  id="country">
+		     <option value="Ind">India </option>
+		     <option value="UK">United Kingdom </option>			
+		</select>
+	
+	Note:--> Only  <<Select>> tag elements to handle selenium have
+		separate commands
+		List of dropdown selection commands:-->
+			1. SelectByVisibleText
+			2. SelectByIndex
+			3. SelectByvalue
+=============================================================
+Link:-->
+	HtmlSource:-->
+
+		<a  href="http://messenger.com" > Messenger </a>
+
+	Note:--> developer create link with  <a> anchor tag and define
+		href as unique property.
+========================================================
+Button:-->
+	HtmlSource:-->
+
+		<button  type="submit"  id="create"></button>
+		<input   type="submit"  id="create"></input>
+		<div  role="button"  onclick="function"></div>
+=========================================================
+checkboxs:-->
+	
+	HtmlSource:-->
+		<input type="checbox"  id="Rtype" ></input>
+		<label  for="Rtype" > Roundtrip </label>
+
+	Note:-->
+		For checkbox selection to validate selenium have
+		separate command.
+			=> IsSelected
+	
+		=> For checkbox selection and deselection we follow
+		     same command   "Click()".
+==========================================================
+Radiobutton:--.
+
+	HtmlSource:-->
+		<input type="radio"  id="Rtype" ></input>
+		<label  for="Rtype" > Roundtrip </label>
+
+	Note:-->
+		For radio button selection to validate selenium have
+		separate command.
+			=> IsSelected
+=======================================================
+Image:-->
+
+	HtmSource:-->
+		
+		<a href="http://messenger.com" >
+			<img src="messenger.png"  id="image1" ></img>
+		</a>
+	
+		Note:--> developer set image tag as "img" and
+			unique propery is  "Src"
+=========================================================		
+Listbox:-->
+
+	HtmlSource:-->
+
+		<div  id="country">
+	           <ul >
+				  <li> India </li>
+				  <li>America </li>
+				  <li> United kingdom</li>
+	           </ul>
+		 </div>
+
+
+		note:--> In selenium for listbox items to selected we don't have
+		              separate commands, We follow Click commands to select
+		              listbox.
+
+====================================================================
+
+
+

@@ -1,0 +1,114 @@
+Example:--> Identify location with parent node..
+[When element id is dynamically changing]
+
+HtmlSource:-->
+				<div id="reg_container"  class="form">
+						<input id="12ed345" type="text"></input>
+				</div>
+syntax:-->
+				By.cssSelector("div[id='reg_container'] > input")
+
+
+================================================================
+Example2:--->
+Recognize object Using Parent Node when Element is duplicated.
+------------->Html Source--------->   
+
+<html>
+<body>
+		<div id="reg_container"  class="form">
+				<input id="email" type="text"></input>
+		</div>
+
+		<div id="reg_login"  class="form">
+				<input id="email" type="text"></input>  ------>>>>TargetElement
+		</div>
+</body>
+</html>
+
+----------------------------------------------------------------------------------------------->
+Syntax:-->
+	parenttagname[property='pvalue'] > childtagname
+
+	By.cssSelector("div[id='reg-login'] > input");
+
+==============================================================================
+Example3:-->
+Recognize object when parent element having Group child elements
+------------->Html Source--------->   
+
+<html>
+<body>
+			<div id="reg_container"  class="form">
+						<input id="email" type="text"></input>
+			</div>
+
+			<div id="reg_login"  class="form">
+						<input id="sample" class="abc"></input>
+						<input id="email" type="text"></input>  ------>>>>TargetElement	
+			</div>
+</body>
+</html>
+---------------------------------------------------------------------------------->
+Syntax:-->
+	parenttagname[property='pvalue'] > childtagname[prop='pvalue']
+
+	By.cssSelector("div[id='reg_login'] > input[id='email']");
+----------------------------------------------------------------------	
+Example4:-->
+Recognize object when parent-element having duplicate child-elements
+Htmlsource:--->
+
+<html>
+<body>
+	<div id="reg_login"  class="form">
+			<input id="sample" class="abc"></input>
+			<input id="sample" class="abc"></input>  ------>>>>TargetElement
+			<input id="sample" class="abc"></input>
+			<input id="sample" class="abc"></input>	
+	</div>
+</body>
+</html>
+
+Cssposition:--->
+			tagname:nth-child(int pos)
+			tagname:nth-of-type(int pos)
+			tagname:nth-last-child(int pos)
+			
+Relative syntax with position:--->
+				
+			By.cssSelector("div[id='reg_login'] > input:nth-child(2)")
+			By.cssSelector("div[id='reg_login'] > input:nth-last-child(3)")	
+--------------------------------------------------------------------------->>
+Example:-->
+		recognize element with position
+	
+	Htmlsource:--->
+			<select id="ClassType"  class="Auto_Complete">
+					<option> Economy </option>
+					<option> Business </option>   ----> target element
+					<option> Peconomy </option>
+			</select>
+
+Css Position syntax:-->
+			
+				tagname:nth-child(int pos)
+				
+				select[id='ClassType'] > option:nth-child(2)
+				
+---------------------------------------------------------------->>
+Example:--> Target Element with sibling elements
+
+			<div id="reg_login"  class="form">
+						<input id="sample" class="abc"></input>
+						<input type="text"></input>  ------>>>>TargetElement	
+			</div>
+			
+			input[id='sample']+input
+			input[id='sample']~input
+-------------------------------------------------------------------------->>
+			
+			
+
+
+

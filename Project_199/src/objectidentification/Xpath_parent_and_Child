@@ -1,0 +1,313 @@
+
+Example1:--->
+Recognize object with unique attributes
+
+<html>
+<body>
+	<div id="reg_login"  class="form">
+		<input id="email" type="text"></input>  ------>>>>TargetElement
+	</div>
+</body>
+</html>
+
+Syntax:-->
+		//tagname[@property='propertyvalue']
+
+		//input[@id='email']
+-------------------------------------------------------------------
+
+Example2:--->
+Recognize object when parent element having single child element
+and child doesn't have unique properties
+------------->Html Source--------->   
+
+<html>
+<body>
+	<div id="reg_container"  class="form">
+		<input id="email" type="text"></input>
+	</div>
+
+	<div id="reg_login"  class="form">
+		<input id="email" type="text"></input>  ------>>>>TargetElement
+	</div>
+</body>
+</html>
+
+Syntax:--->
+		//parenttagname[@property='pvalue']/childtagname
+		
+		by.xpath("//div[@id=reg_login']/input")
+		
+		Note:--> Here forward slash  "/" identify first child element under parent
+
+------------------------------------------------------------------------
+Example3:-->
+Recognize object when parent element having Group child element
+------------->Html Source--------->   
+
+<html>
+<body>
+	<div id="reg_container"  class="form">
+		<input id="email" type="text"></input>
+	</div>
+
+	<div id="reg_login"  class="form">
+		<input id="email" class="abc"></input>
+		<input id="email" type="text"></input>  ------>>>>TargetElement	
+	</div>
+</body>
+</html>		
+		
+syntax:-->
+		//parentagname[property='propertyvalue']/childtagname[prop='propvalue']
+		
+		By.xpath("//div[@id='reg_login']/input[@type='text']")
+--------------------------------------------------------------------------
+Example4:--> Absolute xpath  [Identify location using position]
+	
+HtmlSource:-->
+
+	<html>
+		<body>
+				<div id="reg_login"  class="form">
+						<input id="email" type="text"></input>
+				</div>
+	
+				<div id="reg_login"  class="form">
+						<input id="email" type="text"></input>
+						<input id="email" type="text"></input>  ------>>>>TargetElement	
+				</div>
+		</body>
+	</html>			
+		
+		Syntax:--> 
+				tagname[int position]
+				
+				/html/body/div[2]/input[2]
+				
+		Xpath Index:-->
+				//input[2]
+
+--------------------------------------------------------------------	
+Example5:-->
+Recognize object when parent-element having duplicate child-elements
+Htmlsource:--->
+
+<html>
+<body>
+	<div id="reg_login"  class="form">
+		<input id="sample" class="abc"></input>
+		<input id="sample" class="abc"></input>  ------>>>>TargetElement
+		<input id="sample" class="abc"></input>
+		<input id="sample" class="abc"></input>	
+	</div>
+</body>
+</html>		
+		
+Xpath position:-->
+			//parenttagname[@prop='propvalue']/childtagname[int pos]
+		
+			//div[@id='reg_login']/input[2]
+-------------------------------------------------------------------------
+Example6:-->
+Recognize object with multiple attributes[using <AND> comparision]
+
+Htmlsource:--->
+
+<html>
+<body>
+	<div id="reg_container"  class="form">
+		<input id="email" class="hidden"></input>
+	</div>
+	<div id="reg_login"  class="form">
+		<input id="email" type="email"></input>  ------>>>>TargetElement	
+	</div>
+</body>
+</html>	
+
+
+Syntax:-->
+			//tagname[@prop='pvalue'  and  @prop='pvalue']
+			//tagname[@prop='pvalue'  and  text()='outterText']
+
+			//input[@id='email' and  @type='email']
+----------------------------------------------------------------------------
+Example7:-->
+Recognize object with multiple attributes[using <OR> comparision]		
+	
+HtmlSource:-->		
+<html>
+<body>
+	<div id="reg_login"  class="form">
+		<div id="sample" class="abc"></div>
+		<div id="sample" name="user"> Create Account</div>  ------>>>>TargetElement	
+	</div>
+</body>
+</html>	
+
+Syntax:-->
+		 //tagname[@prop='pvalue' or @prop='pvalue']
+		 //tagname[@prop='pvalue' or text()='visibletext']
+		 
+		 //div[@id='sample' or @name='user']
+		 //div[@id='sample' or text()='Create Account']
+----------------------------------------------------------------------------
+Example8:-->
+Recognize object with multiple attributes[using <OR> <And> comparision]		
+			 
+			//*[@prop='pvalue' and (@prop='pvalue' or  @prop='pvalue')]
+		 	//*[@prop='pvalue' or (@prop='pvalue' and  @prop='pvalue')]
+----------------------------------------------------------------------------
+Example9:-->
+		Recongize object using parital attribute or text
+
+
+	Syntax:-->
+		Recognize object using matching characters
+			//tagname[contains(@prop , 'pvalue')]
+			//tagname[contains(text() , 'visibletext')]
+			
+		Recognize object using parital attribute or text using start characters
+		
+			//tagname[starts-with(@prop , 'pvalue')]
+			//tagname[starts-with(text() , 'text start chars')]
+			
+		Recognize object using parital attribute or text using end characters
+		
+			//tagname[ends-with(@prop , 'pvalue')]
+			//tagname[ends-with(text() , 'text end chars')]	
+---------------------------------------------------------------------------
+Example 10:--->
+		Recognize duplicate objects at webpage
+		
+		Syntax:-->
+					(xpath expression)[int position]
+							
+--->Html Source--------->   
+
+<html>
+<body>
+		<div id="reg_login"  class="form">
+				<input id="email" type="text"></input>
+		</div>
+	
+		<div id="reg_login"  class="form">
+				<input id="email" type="text"></input>  ------>>>>TargetElement
+		</div>
+</body>
+</html>		
+					
+					(//input[@id='email'])[2]
+					
+----------------------------------------------------------------------------
+Example11:-->
+		Recognize object using following sibling
+
+HtmlSource:-->
+
+		<div class="origin">
+				<input id="firstname" name="new">
+				<div class="origin">            --------------------------->Target Element
+		</div>
+		
+	Syntax:-->
+			//SiblingElement/following-sibling::tagname
+		
+		   //input[@id='firstname']/following-sibling::div
+		
+--------------------------------------------------------------------------------		
+Example12:-->
+		Recognize object using following sibling. When multiple Element Available
+
+HtmlSource:-->
+
+		<div class="origin">
+			<input id="firstname" name="new">
+			<div class="origin">
+			<li class="roundtrip"></li>   
+			<div class="origin">			 --------------------------->Target Element
+			<div class="oneway">        
+		</div>	
+		
+		
+		//input[@id='firstname']/following-sibling::div[2]
+---------------------------------------------------------------------------
+Example13:-->
+		Recognize object using preceding sibling
+
+HtmlSource:-->
+
+		<div class="origin">
+				<div class="origin">            --------------------------->Target Element
+				<input id="firstname" name="new">
+		</div>
+		
+
+	Syntax:-->
+			//SiblingElement/preceding-sibling::tagname
+		
+		//input[@id='Firstname']/preceding-sibling::div
+		
+--------------------------------------------------------------------------------		
+Example14:-->
+		Recognize object using preceding sibling. When multiple Element Available
+
+HtmlSource:-->
+
+		<div class="origin">
+					<div class="origin">
+					<div class="roundtrip">   
+					<div class="origin">			 --------------------------->Target Element
+					<div class="oneway">    
+					<input id="firstname" name="new">    
+		</div>	
+		
+		
+		//input[@id='firstname']/preceding-sibling::div[2]
+------------------------------------------------------------------------------->
+Recognize object with  ancestor:--->
+	
+	//tagname[@property='propertyvalue']/ancestor::tagname
+	Note:--> Recongize all parent tags which contain selected tagname.
+
+HtmSource:-->
+		<div  id="UserList">
+			<ul id="firstrow">
+				<li> user1<li>
+				<li> user2<li>               ---->source
+				<li> user3<li>
+			<ul>
+
+			<ul id="secondrow">
+				<li> user4<li>
+				<li> user5<li>              ---->target
+				<li> user6<li>
+			<ul>
+		</div>
+Example:--->
+			
+		//li[.='user2']/ancestor::div[1]/ul[2]/li[2]
+			 
+
+========================================================================
+Example15:--> Target parent Element using Child element
+HtmlSource:-->	
+			<div class="origin">
+				<input id="firstname" name="new">        
+			</div>	
+	Syntax:-->
+			//input[@id='firstname']/parent::div
+=========================================================================
+Example16:--> identify first descendant element
+HtmlSource:-->
+
+	<div id="login_container"  class="demo">      ---->Source
+		<div class="demo">
+			<input id="9ju7yg876"  type="text">  ---->Target Element
+		</div>
+	</div>	
+	
+		Syntax:-->
+		
+		//div[@id='login_container']/descandant::input
+===============================================================			
