@@ -27,6 +27,14 @@ public class Capture_ScreenShot {
 		FileHandler.copy(src, new File("screens\\image.png"));
 		
 		
+		/*
+		 * Dis advantages:-->
+		 * 
+		 * 		=> overriding Image
+		 * 		=> Can't Capture full screen
+		 * 		=> Can't capture screen when alert is presented
+		 */
+		
 		
 	}
 
