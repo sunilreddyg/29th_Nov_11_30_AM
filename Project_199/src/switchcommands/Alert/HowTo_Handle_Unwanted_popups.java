@@ -27,15 +27,17 @@ public class HowTo_Handle_Unwanted_popups
 	    Thread.sleep(3000);
 	    
 	    
-		  try {
-			  
+	    try {
 			driver.switchTo().alert().accept();
-			System.out.println("Alert Closed");
+			System.out.println("Alert is presented");
 			
-		   } catch (Exception e) {
-			System.out.println(e.getMessage());
-		   }
-		   
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	    
+	    Thread.sleep(4000);
+	    driver.close();
 		
 		
 	}

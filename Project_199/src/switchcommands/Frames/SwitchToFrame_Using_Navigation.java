@@ -5,28 +5,31 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class SwitchTo_Frame {
+public class SwitchToFrame_Using_Navigation 
+{
 
 	public static void main(String[] args) throws Exception {
 		
 		//setting runtime environment variable
 		System.setProperty("webdriver.gecko.driver", "C:\\Users\\MINDQ\\Desktop\\recent_drivers\\geckodriver.exe");
 		WebDriver driver=new FirefoxDriver();     //Launching browser method
-		driver.get("https://www.cleartrip.com/account/trips");
+		driver.get("https://www.redbus.in/bus-tickets/");
 	    driver.manage().window().maximize();
+	    
+	    
+	    WebElement Help=driver.findElement(By.xpath("//a[@href='https://www.redbus.in/info/redcare']"));
+	    Help.click();
 	    Thread.sleep(5000);
 	    
-	    //Switch to frame using frame Id or Name property
-	    driver.switchTo().frame("modal_window");
-	    
-	    WebElement Email=driver.findElement(By.xpath("//input[@id='email']"));
-	    Email.clear();
-	    Email.sendKeys("info.dsnr@gmail.com");
+	    //Navigate to frame using frame url...
+	    driver.navigate().to("https://www.redbus.in/login?offerType=Support&defaultSlide=home&isOnlyMobile=false");
+	    WebElement MobileNumber=driver.findElement(By.xpath("//input[@id='mobileNoInp']"));
+	    MobileNumber.sendKeys("9030248855");
 	    
 	    
-	    WebElement tripId=driver.findElement(By.id("tripidSecond"));
-	    tripId.clear();
-	    tripId.sendKeys("67897897");
+	    
+
+
 	}
 
 }

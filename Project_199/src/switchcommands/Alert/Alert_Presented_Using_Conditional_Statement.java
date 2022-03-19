@@ -11,7 +11,7 @@ public class Alert_Presented_Using_Conditional_Statement
 	public static void main(String[] args) throws Exception 
 	{
 		//setting runtime environment variable
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\MINDQ\\Desktop\\new_drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\MINDQ\\Desktop\\recent_drivers\\chromedriver.exe");
 		WebDriver driver=new ChromeDriver();     //Launching browser method
 		driver.get("http://demo.automationtesting.in/Alerts.html");
 	    driver.manage().window().maximize();
@@ -21,21 +21,22 @@ public class Alert_Presented_Using_Conditional_Statement
 	    Alert_prompt_link.click();
 	    Thread.sleep(3000);
 	    
-	   boolean flag=false;
+	  
+	    boolean flag=false;
 	    try {
 			driver.switchTo().alert();
 			flag=true;
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			e.printStackTrace();
 		}
 	    
 	    if(flag==true)
 	    {
-	    	System.out.println("Alert is presented");
+	    	driver.switchTo().alert().accept();
 	    }
 	    else
 	    {
-	    	System.out.println("Alert is not presented");
+	    	System.out.println("Alert is not presente");
 	    }
 	    
 	    
