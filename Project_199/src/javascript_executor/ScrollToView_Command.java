@@ -36,8 +36,8 @@ public class ScrollToView_Command {
 		 */
 		
 		
-		/*Thread.sleep(4000);
-		//Scroll the document to the horizontal position 40:
+		Thread.sleep(4000);
+		//Scroll the document to the horizontal position 400:
 		js.executeScript("window.scrollTo(400, 0);", Element);
 		
 		
@@ -46,6 +46,6 @@ public class ScrollToView_Command {
 		
 		//Scroll the document to the view port using x and y coordination
 		//window.scrollTo(x, y)
-*/	}
+	}
 
 }
