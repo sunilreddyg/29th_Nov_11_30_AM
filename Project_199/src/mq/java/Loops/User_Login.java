@@ -15,7 +15,7 @@ public class User_Login
 		 */
 	
 		//Set Runtime environment variable for chrome driver
-		String chrome_path="C:\\Users\\MINDQ\\Desktop\\new_drivers\\chromedriver.exe";
+		String chrome_path="C:\\Users\\MINDQ\\Desktop\\recent_drivers\\chromedriver.exe";
 		System.setProperty("webdriver.chrome.driver", chrome_path);
 				
 		//browser initiation command
@@ -34,28 +34,34 @@ public class User_Login
 					{"Newuser7","Newpwd7"},
 					{"Arunk","Al123"},
 					{"Akhil","Ak1234"},
+					{"darshan","darshan123"},
 			};
 		
 		
-		   for (int i = 0; i < userdata.length; i++) 
+		   for (int i =0; i < userdata.length; i++) 
 		   {
-			   		String[] EachRow = userdata[i];
-			   		driver.get("https://www.facebook.com");
-		    		
-			   		String UID=EachRow[0];
-		    		WebElement Email=driver.findElement(By.id("email"));
-		    		Email.clear();
-		    		Email.sendKeys(UID);
-		    		
-		    		String PWD=EachRow[1];
-		    		WebElement Password=driver.findElement(By.id("pass"));
-		    		Password.clear();
-		    		Password.sendKeys(PWD);
+			   
+			   	 driver.get("http://facebook.com");
+			     String[] EachRow = userdata[i];
+			     
+			     String UID=EachRow[0];
+			     String PWD=EachRow[1];
+			     
+			     WebElement Email=driver.findElement(By.id("email"));
+			     Email.clear();
+			     Email.sendKeys(UID);
+			     
+			     WebElement password=driver.findElement(By.id("pass"));
+			     password.clear();
+			     password.sendKeys(PWD);
 			
-		    }   
+			     
+			     Thread.sleep(1000);
+		   }  
 	   
 		
-
+		   
+		   
 	}
 
 }

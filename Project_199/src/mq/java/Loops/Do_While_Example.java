@@ -16,8 +16,10 @@ public class Do_While_Example {
 		int i=0;
 		do {
 			
-			i=i+1;
+			
 			System.out.println(i);
+			i=i+1;
+			
 		} while (i < 10);   //True Condition
 		
 		
@@ -26,13 +28,13 @@ public class Do_While_Example {
 		int j=10;
 		do {
 			
-			i=i+1;
-			System.out.println(i);
+			j=j+1;
+			System.out.println(j);
 		} while ( j < 0);   //False Condition
 		
 		
 		//Manage Explicitwait using while loop
-		String chrome_path="C:\\Users\\MINDQ\\Desktop\\new_drivers\\chromedriver.exe";
+		String chrome_path="C:\\Users\\MINDQ\\Desktop\\recent_drivers\\chromedriver.exe";
 		System.setProperty("webdriver.chrome.driver", chrome_path);
 						
 		//browser initiation command
@@ -42,7 +44,7 @@ public class Do_While_Example {
 		int count=0;
 		boolean flag=false;
 		do {
-			driver.get("https://www.google.com");
+			driver.get("https://www.facebook.com/reg");
 			
 			try {
 				flag=new WebDriverWait(driver, Duration.ofSeconds(10))

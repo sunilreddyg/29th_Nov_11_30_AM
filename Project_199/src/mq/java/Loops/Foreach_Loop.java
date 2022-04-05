@@ -1,6 +1,7 @@
 package mq.java.Loops;
 
-public class Foreach_Loop {
+public class Foreach_Loop 
+{
 
 	public static void main(String[] args) 
 	{
@@ -10,6 +11,9 @@ public class Foreach_Loop {
 		{
 			System.out.println(eachbrowser);
 		}
+		
+		
+		
 		
 		//Reading numeric values using foreach loop
 		int num[]= {100,200,300,400};
@@ -34,9 +38,9 @@ public class Foreach_Loop {
 			};
 		
 		//Reading double dimension array data using foreach loop
-		for (String[] EachRow : userdata) 
+		for (String[] eachrow : userdata) 
 		{
-			System.out.println(EachRow[0]+"     "+EachRow[1]);
+			System.out.println(eachrow[0]+"   "+eachrow[1]);
 		}
 		
 		

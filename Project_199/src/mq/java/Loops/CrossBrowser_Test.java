@@ -12,7 +12,7 @@ public class CrossBrowser_Test {
 		
 		
 		String browsers[]= {"chrome","firefox"};
-		String driver_path="C:\\Users\\MINDQ\\Desktop\\new_drivers\\";
+		String driver_path="C:\\Users\\MINDQ\\Desktop\\recent_drivers\\";
 		//outter loop
 		for (int i = 0; i < browsers.length; i++)
 		{
@@ -32,15 +32,15 @@ public class CrossBrowser_Test {
 			
 
 			String links[]={"Sign Up","Log In","Messenger","Places"
-					,"Jobs","Games","Terms","Services","Careers","Cookies","Developers"};
+					,"Games","Terms","Services","Careers","Cookies","Developers","Create Page"};
 			
 			//inner Loop
 		     for (int j = 0; j < links.length; j++) 
 		     {
 		    	 driver.get("http://facebook.com");
 		    	 
-		    	 driver.findElement(By.linkText(links[j])).click();
-		    	 Thread.sleep(2000);
+		    	driver.findElement(By.linkText(links[j])).click();
+		    	 Thread.sleep(3000);
 		    	 System.out.println(links[j]+"    "+driver.getTitle());
 		     }
 			

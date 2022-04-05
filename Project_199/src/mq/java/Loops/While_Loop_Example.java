@@ -25,9 +25,10 @@ public class While_Loop_Example {
 			System.out.println("No-Run");
 		}
 		
+		
 	
 		//Manage Explicitwait using while loop
-		String chrome_path="C:\\Users\\MINDQ\\Desktop\\new_drivers\\chromedriver.exe";
+		String chrome_path="C:\\Users\\MINDQ\\Desktop\\recent_drivers\\chromedriver.exe";
 		System.setProperty("webdriver.chrome.driver", chrome_path);
 						
 		//browser initiation command
@@ -39,24 +40,22 @@ public class While_Loop_Example {
 		
 		//It is a Hidden Element
 		WebElement Retype_Passwrod=driver.findElement(By.xpath("//input[@name='reg_email_confirmation__']"));
-		//driver.findElement(By.xpath("//input[@name='reg_email__']")).sendKeys("info@gmail.com");
 		
 		int count=0;
 		while(!Retype_Passwrod.isDisplayed())
 		{
-			Thread.sleep(1000);
+			System.out.println("Finding object to visible");
 			
 			
 			count=count+1;
-			if(count==10)
+			Thread.sleep(1000);
+			if(count==100)
 			{
-				throw new Exception("Element is Not visble at webpage, Wait managed 10 seconds");
+				throw new Exception("Object Not Found Almost Verified for 10 Seconds");
 			}
 		}
 		
-		System.out.println("Object is displayed");
-		
-		
+		System.out.println("Object is Visible");
 
 	}
 
