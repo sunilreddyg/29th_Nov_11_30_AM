@@ -5,7 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class DatePicker_Select_Required_Date {
+public class DatePicker_Select_Required_Date 
+{
 
 	public static void main(String[] args) throws Exception {
 		
