@@ -22,7 +22,7 @@ public class Run_OrangeHMR_Login {
 		login.type_password("admin123");
 		login.click_login_button();
 		
-		
+
 	}
 
 }
