@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="default">
+
+		<groups>
+			<run>
+					<include name="G1"></include>
+					<include name="G3"></include>
+			</run>
+	</groups>
+
+	<test name="defult" verbose="2">
+			<classes>
+					<class name="framework.Testng.Groups.TestSuite1"></class>
+					<class name="framework.Testng.Groups.TestSuite2"></class>
+					<class name="framework.Testng.Groups.TestSuite3"></class>
+			</classes>
+	</test>
+</suite>
